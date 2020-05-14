@@ -39,3 +39,4 @@ for val, key in lst[:10] :
 # print(*sorted ([(v,k) for k,v in counts.items()], reverse=True)[:10], sep='\n')
 # Ispravna zamena za redove 16-22
 # print(*("%s %s"%(k, v) for v, k in sorted([(v,k) for k,v in counts.items()], reverse = True)[:10]), sep='\n')
+# NB: Ja ovo na kraju ne bih pustio u code review jer linija postaje potpuno nečitljiva.
