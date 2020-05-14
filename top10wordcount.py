@@ -28,4 +28,14 @@ for val, key in lst[:10] :
 
 #BONUS:
 # kraca verzija
-# print(sorted [(v,k) for k,v in counts.items()]) - menja sve od reda 16-22
+# print(sorted [(v,k) for k,v in counts.items()]) - menja sve od reda 16-22, ali ne radi (syntax error)
+# Ispravka sintaksne greške (Štampa sve, u obrnutom redosledu i neformatirano):
+# print(sorted ([(v,k) for k,v in counts.items()]))
+# Štampa u ispravnom redosledu (sve, neformatirano)
+# print(sorted ([(v,k) for k,v in counts.items()], reverse=True))
+# Samo prvih 10:
+# print(sorted ([(v,k) for k,v in counts.items()], reverse=True)[:10])
+# Svaki tuple u svom redu:
+# print(*sorted ([(v,k) for k,v in counts.items()], reverse=True)[:10], sep='\n')
+# Ispravna zamena za redove 16-22
+# print(*("%s %s"%(k, v) for v, k in sorted([(v,k) for k,v in counts.items()], reverse = True)[:10]), sep='\n')
